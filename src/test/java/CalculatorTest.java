@@ -11,7 +11,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testSum() {
+    void testSum() {
         Assertions.assertEquals((Integer)6,Calculator.sum(2,4));
     }
 
