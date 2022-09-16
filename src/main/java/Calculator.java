@@ -1,28 +1,31 @@
+import org.jetbrains.annotations.NotNull;
+import java.math.BigInteger;
+
 public class Calculator {
 
-    public static Integer result;
-    public static Integer sum (Integer value1, Integer value2) {
-        result = value1 + value2;
+    public static BigInteger result;
+    public static BigInteger sum (BigInteger value1, BigInteger value2) {
+        result = value1.add(value2);
         return result;
     }
 
-    public static Integer difference (Integer value1, Integer value2) {
-        result = value1 - value2;
+    public static BigInteger difference (BigInteger value1, BigInteger value2) {
+        result = value1.subtract(value2);
         return result;
     }
 
-    public static Integer multiplication (Integer value1, Integer value2) {
-        result = value1 * value2;
+    public static BigInteger multiplication (BigInteger value1, BigInteger value2) {
+        result = value1.multiply(value2);
         return result;
     }
 
-    public static Integer division (Integer value1, Integer value2) {
-        result = value1 / value2;
+    public static BigInteger division (BigInteger value1, @NotNull BigInteger value2) {
+        result = value1.divide(value2);
         return result;
     }
 
     public static void clear (){
-        result = 0;
+        result = BigInteger.ZERO;
     }
 
 
